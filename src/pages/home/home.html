@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar> <!-- back button here-->
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let image of picArray">  <!--ngFor is angular's for loop, let hero of heroes -->
+      <ion-thumbnail item-start>
+        <img [src]="image.thumbnail"> <!-- src="http://placekitten.com/100/100" -->
+      </ion-thumbnail>
+      <h2>{{image.title}}</h2> <!-- titles of each images-->
+      <p>{{image.details}}</p> <!-- description of each image-->
+      <button ion-button clear item-end>View</button>
+    </ion-item>
+  </ion-list>
+</ion-content>
